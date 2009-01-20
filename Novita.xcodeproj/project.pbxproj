@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* NovitaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* NovitaAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD73870D9D96C1002E5188 /* MainWindow.xib */; };
+		99103E160F1E2F470040F3B9 /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 99103E150F1E2F470040F3B9 /* Readme.rtf */; };
+		99103E220F1E32370040F3B9 /* CREDITS in Resources */ = {isa = PBXBuildFile; fileRef = 99103E1D0F1E32370040F3B9 /* CREDITS */; };
+		99103E230F1E32370040F3B9 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 99103E1E0F1E32370040F3B9 /* README */; };
+		99103E240F1E32370040F3B9 /* INSTALL in Resources */ = {isa = PBXBuildFile; fileRef = 99103E1F0F1E32370040F3B9 /* INSTALL */; };
+		99103E250F1E32370040F3B9 /* API.html in Resources */ = {isa = PBXBuildFile; fileRef = 99103E200F1E32370040F3B9 /* API.html */; };
+		99141E460F1B69AC0093201C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 99141E450F1B69AC0093201C /* Icon.png */; };
+		9933493A0F05B9B100E889CA /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993349390F05B9B100E889CA /* ItemViewController.m */; };
+		99334A220F070FCF00E889CA /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99334A210F070FCF00E889CA /* SettingsView.xib */; };
+		99334A240F070FD600E889CA /* QuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99334A230F070FD600E889CA /* QuizView.xib */; };
+		99334A660F072AD000E889CA /* StudyItemsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99334A650F072AD000E889CA /* StudyItemsView.xib */; };
+		995AD9E20F125CFB001F933E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 995AD9E10F125CFB001F933E /* Default.png */; };
+		995ADA830F127A35001F933E /* ItemDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995ADA820F127A35001F933E /* ItemDetailCell.m */; };
+		995ADA870F127AF9001F933E /* ItemDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995ADA860F127AF9001F933E /* ItemDetailCell.xib */; };
+		995ADB1E0F12869F001F933E /* ItemDetailSentenceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995ADB1D0F12869F001F933E /* ItemDetailSentenceCell.xib */; };
+		995ADB210F1286BB001F933E /* ItemDetailSentenceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 995ADB200F1286BB001F933E /* ItemDetailSentenceCell.m */; };
+		995DC1160F1041990084DA48 /* UsernameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995DC1150F1041990084DA48 /* UsernameCell.xib */; };
+		995DC11E0F1042430084DA48 /* UsernameCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 995DC11D0F1042430084DA48 /* UsernameCellView.m */; };
+		996453C50F19FF7500D1168F /* CustomItemKanaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 996453C40F19FF7500D1168F /* CustomItemKanaCell.xib */; };
+		9981A5F10F255FAD002D83A6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9981A5F00F255FAD002D83A6 /* .gitignore */; };
+		9981A5F30F255FEB002D83A6 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 9981A5F20F255FEB002D83A6 /* .gitattributes */; };
+		9990D90C0F0C4B8A0084B431 /* speaker_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9990D90B0F0C4B8A0084B431 /* speaker_icon.png */; };
+		9990DAA00F0C779A0084B431 /* ItemDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9990DA9F0F0C779A0084B431 /* ItemDetailController.m */; };
+		9990DAA20F0C78310084B431 /* ItemDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9990DAA10F0C78310084B431 /* ItemDetailView.xib */; };
+		99931F810F11B64C00805DF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99931F800F11B64C00805DF1 /* AVFoundation.framework */; };
+		99A8B84B0EFE5756009EF4FF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 99A8B8440EFE5756009EF4FF /* settings.png */; };
+		99A8B84D0EFE5756009EF4FF /* study.png in Resources */ = {isa = PBXBuildFile; fileRef = 99A8B8460EFE5756009EF4FF /* study.png */; };
+		99A8B84E0EFE5756009EF4FF /* Quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 99A8B8470EFE5756009EF4FF /* Quiz.png */; };
+		99B40CAA0F0BD9150089A729 /* CustomItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B40CA90F0BD9150089A729 /* CustomItemCell.m */; };
+		99B40CAC0F0BD92B0089A729 /* CustomItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99B40CAB0F0BD92B0089A729 /* CustomItemCell.xib */; };
+		99C260A60F1B3F3500AA979F /* CoursesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99C260A50F1B3F3500AA979F /* CoursesCell.xib */; };
+		99C260AA0F1B400300AA979F /* CoursesCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C260A90F1B400300AA979F /* CoursesCellController.m */; };
+		99C260AD0F1B485F00AA979F /* course_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C260AC0F1B485F00AA979F /* course_placeholder.png */; };
+		99C88F290F1D07E4008BB098 /* speaker_icon_not_downloaded.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C88F280F1D07E4008BB098 /* speaker_icon_not_downloaded.png */; };
+		99F7BC050F0A8675002BF04D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F7BC040F0A8675002BF04D /* AboutViewController.m */; };
+		99F7BC070F0A86BE002BF04D /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7BC060F0A86BE002BF04D /* AboutView.xib */; };
+		99F7BC0A0F0A886D002BF04D /* powered_by_iknow_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 99F7BC090F0A886D002BF04D /* powered_by_iknow_blue.png */; };
+		99F7BCD60F0B1904002BF04D /* CoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F7BCD50F0B1904002BF04D /* CoursesViewController.m */; };
+		99F7BCF60F0B1A3E002BF04D /* CoursesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F7BCF50F0B1A3E002BF04D /* CoursesView.xib */; };
+		99FC6E8B0F0A0D5D0021CCB9 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC6E8A0F0A0D5D0021CCB9 /* SettingsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* NovitaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovitaAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* NovitaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovitaAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Novita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novita.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AB4B0D9B1048005BE974 /* Novita_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Novita_Prefix.pch; sourceTree = "<group>"; };
+		28AD73870D9D96C1002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99103E150F1E2F470040F3B9 /* Readme.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
+		99103E1D0F1E32370040F3B9 /* CREDITS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
+		99103E1E0F1E32370040F3B9 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		99103E1F0F1E32370040F3B9 /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		99103E200F1E32370040F3B9 /* API.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = API.html; sourceTree = "<group>"; };
+		99141E450F1B69AC0093201C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		993349380F05B9B100E889CA /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		993349390F05B9B100E889CA /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		99334A210F070FCF00E889CA /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		99334A230F070FD600E889CA /* QuizView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizView.xib; sourceTree = "<group>"; };
+		99334A650F072AD000E889CA /* StudyItemsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyItemsView.xib; sourceTree = "<group>"; };
+		995AD9E10F125CFB001F933E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		995ADA810F127A35001F933E /* ItemDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemDetailCell.h; path = ../ItemDetailCell.h; sourceTree = "<group>"; };
+		995ADA820F127A35001F933E /* ItemDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemDetailCell.m; path = ../ItemDetailCell.m; sourceTree = "<group>"; };
+		995ADA860F127AF9001F933E /* ItemDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailCell.xib; sourceTree = "<group>"; };
+		995ADB1D0F12869F001F933E /* ItemDetailSentenceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailSentenceCell.xib; sourceTree = "<group>"; };
+		995ADB1F0F1286BB001F933E /* ItemDetailSentenceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailSentenceCell.h; sourceTree = "<group>"; };
+		995ADB200F1286BB001F933E /* ItemDetailSentenceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailSentenceCell.m; sourceTree = "<group>"; };
+		995DC1150F1041990084DA48 /* UsernameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsernameCell.xib; sourceTree = "<group>"; };
+		995DC11C0F1042430084DA48 /* UsernameCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsernameCellView.h; sourceTree = "<group>"; };
+		995DC11D0F1042430084DA48 /* UsernameCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsernameCellView.m; sourceTree = "<group>"; };
+		996453C40F19FF7500D1168F /* CustomItemKanaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomItemKanaCell.xib; sourceTree = "<group>"; };
+		9981A5F00F255FAD002D83A6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9981A5F20F255FEB002D83A6 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		9990D90B0F0C4B8A0084B431 /* speaker_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon.png; sourceTree = "<group>"; };
+		9990DA9E0F0C779A0084B431 /* ItemDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailController.h; sourceTree = "<group>"; };
+		9990DA9F0F0C779A0084B431 /* ItemDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailController.m; sourceTree = "<group>"; };
+		9990DAA10F0C78310084B431 /* ItemDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailView.xib; sourceTree = "<group>"; };
+		99931F800F11B64C00805DF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		99A8B8440EFE5756009EF4FF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		99A8B8460EFE5756009EF4FF /* study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study.png; sourceTree = "<group>"; };
+		99A8B8470EFE5756009EF4FF /* Quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quiz.png; sourceTree = "<group>"; };
+		99B40CA80F0BD9150089A729 /* CustomItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomItemCell.h; sourceTree = "<group>"; };
+		99B40CA90F0BD9150089A729 /* CustomItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomItemCell.m; sourceTree = "<group>"; };
+		99B40CAB0F0BD92B0089A729 /* CustomItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomItemCell.xib; sourceTree = "<group>"; };
+		99C260A50F1B3F3500AA979F /* CoursesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCell.xib; sourceTree = "<group>"; };
+		99C260A80F1B400300AA979F /* CoursesCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesCellController.h; sourceTree = "<group>"; };
+		99C260A90F1B400300AA979F /* CoursesCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesCellController.m; sourceTree = "<group>"; };
+		99C260AC0F1B485F00AA979F /* course_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = course_placeholder.png; sourceTree = "<group>"; };
+		99C88F280F1D07E4008BB098 /* speaker_icon_not_downloaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon_not_downloaded.png; sourceTree = "<group>"; };
+		99F7BC030F0A8675002BF04D /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		99F7BC040F0A8675002BF04D /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		99F7BC060F0A86BE002BF04D /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		99F7BC090F0A886D002BF04D /* powered_by_iknow_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powered_by_iknow_blue.png; sourceTree = "<group>"; };
+		99F7BCD40F0B1904002BF04D /* CoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesViewController.h; sourceTree = "<group>"; };
+		99F7BCD50F0B1904002BF04D /* CoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesViewController.m; sourceTree = "<group>"; };
+		99F7BCF50F0B1A3E002BF04D /* CoursesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesView.xib; sourceTree = "<group>"; };
+		99FC6E890F0A0D5D0021CCB9 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		99FC6E8A0F0A0D5D0021CCB9 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				99931F810F11B64C00805DF1 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				99F7BCD20F0B18EA002BF04D /* Study Tab */,
+				99FC6E880F0A0D4F0021CCB9 /* Settings Tab */,
+				1D3623240D0F684500981E51 /* NovitaAppDelegate.h */,
+				1D3623250D0F684500981E51 /* NovitaAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Novita.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Novita */ = {
+			isa = PBXGroup;
+			children = (
+				99103E170F1E321B0040F3B9 /* JSON */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				99103E150F1E2F470040F3B9 /* Readme.rtf */,
+			);
+			name = Novita;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AB4B0D9B1048005BE974 /* Novita_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9981A5F20F255FEB002D83A6 /* .gitattributes */,
+				99F7BC090F0A886D002BF04D /* powered_by_iknow_blue.png */,
+				99A8B8440EFE5756009EF4FF /* settings.png */,
+				99C88F280F1D07E4008BB098 /* speaker_icon_not_downloaded.png */,
+				99A8B8460EFE5756009EF4FF /* study.png */,
+				99C260AC0F1B485F00AA979F /* course_placeholder.png */,
+				99141E450F1B69AC0093201C /* Icon.png */,
+				99A8B8470EFE5756009EF4FF /* Quiz.png */,
+				995AD9E10F125CFB001F933E /* Default.png */,
+				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				9990D90B0F0C4B8A0084B431 /* speaker_icon.png */,
+				99334A210F070FCF00E889CA /* SettingsView.xib */,
+				99334A230F070FD600E889CA /* QuizView.xib */,
+				99334A650F072AD000E889CA /* StudyItemsView.xib */,
+				99F7BC060F0A86BE002BF04D /* AboutView.xib */,
+				99F7BCF50F0B1A3E002BF04D /* CoursesView.xib */,
+				99B40CAB0F0BD92B0089A729 /* CustomItemCell.xib */,
+				996453C40F19FF7500D1168F /* CustomItemKanaCell.xib */,
+				9990DAA10F0C78310084B431 /* ItemDetailView.xib */,
+				995ADB1D0F12869F001F933E /* ItemDetailSentenceCell.xib */,
+				995DC1150F1041990084DA48 /* UsernameCell.xib */,
+				995ADA860F127AF9001F933E /* ItemDetailCell.xib */,
+				99C260A50F1B3F3500AA979F /* CoursesCell.xib */,
+				9981A5F00F255FAD002D83A6 /* .gitignore */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99931F800F11B64C00805DF1 /* AVFoundation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99103E170F1E321B0040F3B9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				99103E1D0F1E32370040F3B9 /* CREDITS */,
+				99103E1E0F1E32370040F3B9 /* README */,
+				99103E1F0F1E32370040F3B9 /* INSTALL */,
+				99103E200F1E32370040F3B9 /* API.html */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		99F7BCD20F0B18EA002BF04D /* Study Tab */ = {
+			isa = PBXGroup;
+			children = (
+				993349380F05B9B100E889CA /* ItemViewController.h */,
+				993349390F05B9B100E889CA /* ItemViewController.m */,
+				99F7BCD40F0B1904002BF04D /* CoursesViewController.h */,
+				99F7BCD50F0B1904002BF04D /* CoursesViewController.m */,
+				99B40CA80F0BD9150089A729 /* CustomItemCell.h */,
+				99B40CA90F0BD9150089A729 /* CustomItemCell.m */,
+				995ADA810F127A35001F933E /* ItemDetailCell.h */,
+				995ADA820F127A35001F933E /* ItemDetailCell.m */,
+				9990DA9E0F0C779A0084B431 /* ItemDetailController.h */,
+				9990DA9F0F0C779A0084B431 /* ItemDetailController.m */,
+				995ADB1F0F1286BB001F933E /* ItemDetailSentenceCell.h */,
+				995ADB200F1286BB001F933E /* ItemDetailSentenceCell.m */,
+				99C260A80F1B400300AA979F /* CoursesCellController.h */,
+				99C260A90F1B400300AA979F /* CoursesCellController.m */,
+			);
+			name = "Study Tab";
+			sourceTree = "<group>";
+		};
+		99FC6E880F0A0D4F0021CCB9 /* Settings Tab */ = {
+			isa = PBXGroup;
+			children = (
+				99FC6E890F0A0D5D0021CCB9 /* SettingsViewController.h */,
+				99FC6E8A0F0A0D5D0021CCB9 /* SettingsViewController.m */,
+				99F7BC030F0A8675002BF04D /* AboutViewController.h */,
+				99F7BC040F0A8675002BF04D /* AboutViewController.m */,
+				995DC11C0F1042430084DA48 /* UsernameCellView.h */,
+				995DC11D0F1042430084DA48 /* UsernameCellView.m */,
+			);
+			name = "Settings Tab";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Novita */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Novita" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Novita;
+			productName = Novita;
+			productReference = 1D6058910D05DD3D006BFB54 /* Novita.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Novita" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Novita */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Novita */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
+				99A8B84B0EFE5756009EF4FF /* settings.png in Resources */,
+				99A8B84D0EFE5756009EF4FF /* study.png in Resources */,
+				99A8B84E0EFE5756009EF4FF /* Quiz.png in Resources */,
+				99334A220F070FCF00E889CA /* SettingsView.xib in Resources */,
+				99334A240F070FD600E889CA /* QuizView.xib in Resources */,
+				99334A660F072AD000E889CA /* StudyItemsView.xib in Resources */,
+				99F7BC070F0A86BE002BF04D /* AboutView.xib in Resources */,
+				99F7BC0A0F0A886D002BF04D /* powered_by_iknow_blue.png in Resources */,
+				99F7BCF60F0B1A3E002BF04D /* CoursesView.xib in Resources */,
+				99B40CAC0F0BD92B0089A729 /* CustomItemCell.xib in Resources */,
+				9990D90C0F0C4B8A0084B431 /* speaker_icon.png in Resources */,
+				9990DAA20F0C78310084B431 /* ItemDetailView.xib in Resources */,
+				995DC1160F1041990084DA48 /* UsernameCell.xib in Resources */,
+				995AD9E20F125CFB001F933E /* Default.png in Resources */,
+				995ADA870F127AF9001F933E /* ItemDetailCell.xib in Resources */,
+				995ADB1E0F12869F001F933E /* ItemDetailSentenceCell.xib in Resources */,
+				996453C50F19FF7500D1168F /* CustomItemKanaCell.xib in Resources */,
+				99C260A60F1B3F3500AA979F /* CoursesCell.xib in Resources */,
+				99C260AD0F1B485F00AA979F /* course_placeholder.png in Resources */,
+				99141E460F1B69AC0093201C /* Icon.png in Resources */,
+				99C88F290F1D07E4008BB098 /* speaker_icon_not_downloaded.png in Resources */,
+				99103E160F1E2F470040F3B9 /* Readme.rtf in Resources */,
+				99103E220F1E32370040F3B9 /* CREDITS in Resources */,
+				99103E230F1E32370040F3B9 /* README in Resources */,
+				99103E240F1E32370040F3B9 /* INSTALL in Resources */,
+				99103E250F1E32370040F3B9 /* API.html in Resources */,
+				9981A5F10F255FAD002D83A6 /* .gitignore in Resources */,
+				9981A5F30F255FEB002D83A6 /* .gitattributes in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* NovitaAppDelegate.m in Sources */,
+				9933493A0F05B9B100E889CA /* ItemViewController.m in Sources */,
+				99FC6E8B0F0A0D5D0021CCB9 /* SettingsViewController.m in Sources */,
+				99F7BC050F0A8675002BF04D /* AboutViewController.m in Sources */,
+				99F7BCD60F0B1904002BF04D /* CoursesViewController.m in Sources */,
+				99B40CAA0F0BD9150089A729 /* CustomItemCell.m in Sources */,
+				9990DAA00F0C779A0084B431 /* ItemDetailController.m in Sources */,
+				995DC11E0F1042430084DA48 /* UsernameCellView.m in Sources */,
+				995ADA830F127A35001F933E /* ItemDetailCell.m in Sources */,
+				995ADB210F1286BB001F933E /* ItemDetailSentenceCell.m in Sources */,
+				99C260AA0F1B400300AA979F /* CoursesCellController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "$HOME/Library/SDKs/JSON/$(PLATFORM_NAME).sdk";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brett Gneiting";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					/Volumes/JSON_2.1.1,
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Novita_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-ljson",
+				);
+				PRODUCT_NAME = Novita;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7C068F92-D09B-4DBD-AEA2-C78EF39AB043";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					/Volumes/JSON_2.1.1,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Novita_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = Novita;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-ljson",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Novita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Novita" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
