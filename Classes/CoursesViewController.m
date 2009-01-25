@@ -230,7 +230,7 @@
 	
 	NSString *courseImage = [[self.jsonData objectAtIndex:row] objectForKey:@"square_icon"];
 	
-	if(courseImage != nil) {
+	if([courseImage class] != [NSNull class]) {
 		//there is an image for this course, if we have a local version use that, otherwise download it
 		
 		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 

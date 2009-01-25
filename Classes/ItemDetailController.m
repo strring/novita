@@ -147,8 +147,12 @@
 		
 		
 		//check if there is a sound file for this row, if there is display a graphic so the user knows to tap it
-		if([[[[itemDetailDictionary valueForKey:@"sentences"] objectAtIndex:row] valueForKey:@"sound"]
-			length] > 0) {
+		if([[itemDetailDictionary valueForKey:@"sentences"] count] < 1) {
+			return nil;
+		}
+		
+		
+		if([[[[itemDetailDictionary valueForKey:@"sentences"] objectAtIndex:row] valueForKey:@"sound"] class] != [NSNull class]) {
 			
 			//check if the sound file is local, if it is show the blue icon
 			NSString *selectedWord = [[[itemDetailDictionary valueForKey:@"sentences"] objectAtIndex:row] objectForKey:@"sound"];
@@ -232,7 +236,7 @@
 	NSString *selectedWord = [[[self.itemDetailDictionary valueForKey:@"sentences"] objectAtIndex:row] 
 							  objectForKey:@"sound"];
 	
-	if([selectedWord length] > 0) {	
+	if([selectedWord class] != [NSNull class]) {	
 		//break the http path into an array split by the "/"
 		NSArray *soundPathArray = [selectedWord componentsSeparatedByString:@"/"];
 		
@@ -259,6 +263,8 @@
 			self.receivedData = data;
 			[data release];
 		}
+		
+		
 		NSError *error;
 		
 		AVAudioPlayer *playPronunciation = [[AVAudioPlayer alloc] initWithData:self.receivedData error:&error];

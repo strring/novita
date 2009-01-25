@@ -33,19 +33,25 @@
 
 
 @interface ItemViewController : UIViewController
-<UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate>
+<UITableViewDelegate, UITableViewDataSource, AVAudioPlayerDelegate, UISearchBarDelegate>
 {
 	NSMutableArray *jsonData;
+	NSMutableArray *jsonDataCopy;
 	NSString *currentList;
 	NSInteger currentListCount;
 	UITableView *itemsTable;
 	NSMutableData *receivedData;
+	UISearchBar *itemSearchBar;
 }
 
-@property (nonatomic,retain) NSMutableArray *jsonData;
-@property (nonatomic,retain) NSString *currentList;
 @property (assign) NSInteger currentListCount;
-@property (nonatomic,retain) IBOutlet UITableView *itemsTable;
+
+@property (nonatomic,retain) NSMutableArray *jsonData;
+@property (nonatomic,retain) NSMutableArray *jsonDataCopy;
+@property (nonatomic,retain) NSString *currentList;
 @property (nonatomic,retain) NSMutableData *receivedData;
+
+@property (nonatomic,retain) IBOutlet UITableView *itemsTable;
+@property (nonatomic,retain) IBOutlet UISearchBar *itemSearchBar;
 
 @end

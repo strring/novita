@@ -19,6 +19,7 @@
 		99103E240F1E32370040F3B9 /* INSTALL in Resources */ = {isa = PBXBuildFile; fileRef = 99103E1F0F1E32370040F3B9 /* INSTALL */; };
 		99103E250F1E32370040F3B9 /* API.html in Resources */ = {isa = PBXBuildFile; fileRef = 99103E200F1E32370040F3B9 /* API.html */; };
 		99141E460F1B69AC0093201C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 99141E450F1B69AC0093201C /* Icon.png */; };
+		9932E6150F2A1EA30072B787 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9932E6140F2A1EA30072B787 /* Entitlements.plist */; };
 		9933493A0F05B9B100E889CA /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993349390F05B9B100E889CA /* ItemViewController.m */; };
 		99334A220F070FCF00E889CA /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99334A210F070FCF00E889CA /* SettingsView.xib */; };
 		99334A240F070FD600E889CA /* QuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99334A230F070FD600E889CA /* QuizView.xib */; };
@@ -71,6 +72,7 @@
 		99103E1F0F1E32370040F3B9 /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
 		99103E200F1E32370040F3B9 /* API.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = API.html; sourceTree = "<group>"; };
 		99141E450F1B69AC0093201C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		9932E6140F2A1EA30072B787 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		993349380F05B9B100E889CA /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		993349390F05B9B100E889CA /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		99334A210F070FCF00E889CA /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				99103E150F1E2F470040F3B9 /* Readme.rtf */,
+				9932E6140F2A1EA30072B787 /* Entitlements.plist */,
 			);
 			name = Novita;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				99103E250F1E32370040F3B9 /* API.html in Resources */,
 				9981A5F10F255FAD002D83A6 /* .gitignore in Resources */,
 				9981A5F30F255FEB002D83A6 /* .gitattributes in Resources */,
+				9932E6150F2A1EA30072B787 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,45 @@
 			};
 			name = Release;
 		};
+		99321BBD0F2A1D59007FFCD8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brett Gneiting";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F9D7D865-A49B-49EB-AA67-FA631D8D8A23";
+				SDKROOT = iphoneos2.2;
+			};
+			name = Distribution;
+		};
+		99321BBE0F2A1D59007FFCD8 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "$HOME/Library/SDKs/JSON/$(PLATFORM_NAME).sdk";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					/Volumes/JSON_2.1.1,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Novita_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-ljson",
+				);
+				PRODUCT_NAME = Novita;
+			};
+			name = Distribution;
+		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +489,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+				99321BBE0F2A1D59007FFCD8 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -455,6 +499,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+				99321BBD0F2A1D59007FFCD8 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

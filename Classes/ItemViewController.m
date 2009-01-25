@@ -36,7 +36,7 @@
 
 @implementation ItemViewController
 
-@synthesize currentList, currentListCount, jsonData, itemsTable, receivedData;
+@synthesize currentList, currentListCount, jsonData, jsonDataCopy, itemsTable, receivedData, itemSearchBar;
 
 
 #pragma mark -
@@ -63,6 +63,7 @@
 	//save the raw JSON data as NSData
 	NSData *itemData = [[NSData alloc] initWithContentsOfURL:itemURL];
 	NSString *itemString = [[NSString alloc] initWithContentsOfURL:itemURL];
+	
 	// converting the json data into an array
 	self.jsonData = [itemString JSONValue]; 
 	
@@ -86,6 +87,59 @@
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)finishedSearching:(id)sender {
+	[itemSearchBar resignFirstResponder];
+	
+	self.navigationItem.rightBarButtonItem = nil;
+	
+	[self.itemsTable reloadData];
+}
+
+
+- (void)searchTableView {
+	NSString *searchText = itemSearchBar.text;
+	
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	
+	//loop our full data array and add any items that match our search to our copy array
+	for(NSDictionary *dict in self.jsonData)
+	{
+		//NSLog(@"%@",dict);
+		//NSLog(@"%@",[[dict valueForKey:@"responses"] valueForKey:@"text"]);
+		NSString *meaningString = [[[dict valueForKey:@"responses"] objectAtIndex:0] valueForKey:@"text"];
+		NSString *kanaString = [[dict valueForKey:@"cue"] valueForKey:@"text"];
+		
+		NSString *kanjiString;
+		
+		if([[dict valueForKey:@"responses"] count] == 1) {
+			kanjiString = [[dict valueForKey:@"cue"] valueForKey:@"text"];
+		} else {
+			kanjiString = [[[dict valueForKey:@"responses"] objectAtIndex:1] valueForKey:@"text"];
+		}
+		NSRange resultRangeMeaning = [meaningString 
+									   rangeOfString:searchText 
+									   options:NSCaseInsensitiveSearch];
+		
+		NSRange resultRangeKana = [kanaString 
+									  rangeOfString:searchText 
+									  options:NSCaseInsensitiveSearch];
+		
+		NSRange resultRangeKanji = [kanjiString 
+								   rangeOfString:searchText 
+								   options:NSCaseInsensitiveSearch];
+		
+		
+		if(resultRangeMeaning.length > 0 || resultRangeKana.length > 0 || resultRangeKanji.length > 0)
+		{
+			[tempArray addObject:dict];
+		}
+	}
+	
+	self.jsonDataCopy = tempArray;
+	
+	[tempArray release];
+	tempArray = nil;
+}
 
 #pragma mark -
 #pragma mark Default Methods
@@ -115,14 +169,26 @@
 	
 	[backButton release];	
 	
+	
+	//setup the search bar
+	//[self resetSearch];
+	itemSearchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+	itemSearchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+	
+	
+	//set this class as the delegate for the audio player
+	
+	
 	[super viewDidLoad];
 }
 
 
 - (void)dealloc {
 	[jsonData release];
+	[jsonDataCopy release];
 	[currentList release];
 	[receivedData release];
+	[itemSearchBar release];
     [super dealloc];
 }
 
@@ -151,8 +217,8 @@
 	NSUInteger row = [indexPath row];
 	
 	NSString *selectedWord = [[[self.jsonData objectAtIndex:row] objectForKey:@"cue"] objectForKey:@"sound"];
-
-	if([selectedWord length] > 0) {	
+	
+	if([selectedWord class] != [NSNull class]) {	
 		//break the http path into an array split by the "/"
 		NSArray *soundPathArray = [selectedWord componentsSeparatedByString:@"/"];
 		
@@ -180,10 +246,31 @@
 			[data release];
 		}
 		NSError *error;
-	
-		AVAudioPlayer *playPronunciation = [[AVAudioPlayer alloc] initWithData:self.receivedData error:&error];
 		
-		[playPronunciation play];
+		NSArray *soundFileNoExtArray = [soundFile componentsSeparatedByString:@"."];
+		
+		//return the last Object, which will be the name of the mp3 file
+		NSString *soundFileNoExt = [soundFileNoExtArray objectAtIndex:0];
+		
+		
+		NSString *path = [[NSBundle mainBundle] pathForResource:soundFileNoExt ofType:@"mp3" inDirectory:documentsDirectoryPath];
+		
+		
+		AVAudioPlayer *playPronunciation = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+		NSLog(@"%@",error);
+		//AVAudioPlayer *playPronunciation = [[AVAudioPlayer alloc] initWithData:self.receivedData error:&error];
+
+		playPronunciation.delegate = self;
+		
+		//make sure the AVAudioPlayer isn't still busy before we try to play again by stopping it first.
+		[playPronunciation stop];
+		
+		//prepare the audio player to play the file
+		if(!([playPronunciation prepareToPlay])){
+			NSLog(@"Error playing back");
+		} else {
+			[playPronunciation play];
+		}
 		
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
 		
@@ -218,10 +305,7 @@
 	NSDictionary *currentItem = [self.jsonData objectAtIndex:[indexPath row]];
 	NSString *itemSentence = [currentItem valueForKey:@"sentences"];
 	
-	NSNull *nullClass = [[NSNull alloc] init];
-	
-	return ([itemSentence class] == [nullClass class]) ? UITableViewCellAccessoryNone : UITableViewCellAccessoryDetailDisclosureButton;
-	[nullClass release];
+	return ([itemSentence class] == [NSNull class]) ? UITableViewCellAccessoryNone : UITableViewCellAccessoryDetailDisclosureButton;
 }
 
 
@@ -241,8 +325,7 @@
 	}
 	NSDictionary *currentItem = [self.jsonData objectAtIndex:row];
 	
-	if([[[currentItem valueForKey:@"cue"] valueForKey:@"sound"]
- length] > 0) {
+	if([[[currentItem valueForKey:@"cue"] valueForKey:@"sound"] class] != [NSNull class]) {
 		
 		//check if the sound file is local, if it is show the blue icon
 		NSString *selectedWord = [[[self.jsonData objectAtIndex:row] objectForKey:@"cue"] objectForKey:@"sound"];
@@ -294,7 +377,8 @@
 #pragma mark AVAudioPlayer Delegate Methods
 - (void)audioPlayerDidFinishPlaying: (AVAudioPlayer*)player successfully: (BOOL)flag
 {
-	NSLog(@"Played Sound File");
+	NSLog(@"Successfully Played Sound File");
+	[player release];
 }
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
@@ -309,6 +393,52 @@
 
 - (void)audioPlayerEndInterruption:(AVAudioPlayer *)player {
 	NSLog(@"interruption ended");
+}
+
+#pragma mark -
+#pragma mark UISearchBar Delegate Methods
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+	if([itemSearchBar.text length] > 0) {
+		self.jsonData = self.jsonDataCopy;
+		[self.itemsTable reloadData];
+	}
+	
+	[self searchTableView];
+	
+	[searchBar resignFirstResponder];
+	
+	self.navigationItem.rightBarButtonItem = nil;
+}
+
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+	
+	//add the done button to the navigation bar
+	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(finishedSearching:)] autorelease];
+}
+
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+	
+	//Remove all objects first.
+	//[jsonDataCopy removeAllObjects];
+	
+	if([searchText length] > 0) {
+		[self searchTableView];
+	} else {
+		//reset the table view data to list all items from our item text file
+		
+		NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); 
+		NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+		
+		NSString *localResource = [NSString stringWithFormat:@"%@/%@.txt",documentsDirectoryPath,self.currentList];	
+		
+		NSString *courseList = [[NSString alloc] initWithContentsOfFile:localResource];
+		
+		self.jsonData = [courseList JSONValue]; 
+	}
+	
+	[self.itemsTable reloadData];
 }
 
 @end
